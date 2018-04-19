@@ -1,0 +1,18 @@
+{
+  "name": "mugloar-solver",
+  "version": "1.0.0",
+  "description": "Solver for dragons of mugloar game",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "dragonsofmugloar",
+    "mugloar",
+    "game",
+    "test",
+    "task"
+  ],
+  "author": "Jaan Pullerits <clysuva@gmail.com>",
+  "license": "ISC"
+}
