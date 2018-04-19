@@ -2,6 +2,7 @@
   "name": "mugloar-solver",
   "version": "1.0.0",
   "description": "Solver for dragons of mugloar game",
+  "repository": "https://github.com/Suva/mugloar-solver",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
