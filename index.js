@@ -1,4 +1,4 @@
-function solve (knight, weatherCode) {
+function solve(knight, weatherCode) {
     knight = {
         attack: knight.attack,
         armor: knight.armor,
@@ -14,34 +14,25 @@ function solve (knight, weatherCode) {
         endurance: 'fireBreath'
     };
 
-
     if (weatherCode === 'HVA') {
         // Heavy rain: clawSharpness 10 and fireBreath 0
         return {
-            dragon: {
-                'scaleThickness': 5,
-                'clawSharpness': 10,
-                'wingStrength': 5,
-                'fireBreath': 0
-            },
-            gameId: game.gameId
+            'scaleThickness': 5,
+            'clawSharpness': 10,
+            'wingStrength': 5,
+            'fireBreath': 0
         }
     } else if (weatherCode === 'T E') {
         // Long dry: dragon's stats have to be balanced
         return {
-            dragon: {
-                'scaleThickness': 5,
-                'clawSharpness': 5,
-                'wingStrength': 5,
-                'fireBreath': 5
-            },
-            gameId: game.gameId
+            'scaleThickness': 5,
+            'clawSharpness': 5,
+            'wingStrength': 5,
+            'fireBreath': 5
         }
     } else if (weatherCode === 'SRO') {
         // Storm: dragon doesn't show up
-        return {
-            gameId: game.gameId
-        }
+        return null
     }
 
     Object.keys(knight).sort(function (b, a) {
@@ -59,7 +50,7 @@ function solve (knight, weatherCode) {
         dragon[dragonAttributeName] = value;
     })
 
-    return {dragon: dragon};
+    return dragon;
 }
 
-module.exports = { solve }
+module.exports = {solve}

@@ -9,15 +9,30 @@ const knight = {
     endurance: 7
 }
 
-const res = solver.solve(knight, 'NMR')
+// Normal weather
+assert.deepEqual(solver.solve(knight, 'NMR'), {
+    fireBreath: 9,
+    wingStrength: 5,
+    scaleThickness: 4,
+    clawSharpness: 2
+})
 
-assert.deepEqual(res, {
-        dragon:
-            {
-                fireBreath: 9,
-                wingStrength: 5,
-                scaleThickness: 4,
-                clawSharpness: 2
-            }
-    }
-)
+// Storm
+assert.equal(solver.solve(knight, 'SRO'), null)
+
+// Heavy rain
+assert.deepEqual(solver.solve(knight, 'HVA'), {
+    fireBreath: 0,
+    wingStrength: 5,
+    scaleThickness: 5,
+    clawSharpness: 10
+})
+
+// Long dry
+assert.deepEqual(solver.solve(knight, 'T E'), {
+    fireBreath: 5,
+    wingStrength: 5,
+    scaleThickness: 5,
+    clawSharpness: 5
+})
+
